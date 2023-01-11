@@ -1,0 +1,62 @@
+*TOP SECRET, ONLY SHARE THIS LINK WITH YOURSELF, DO NOT LET IT BE LEAKED OUT*
+
+secret bypasses:
+
+** NOTE: for the following two bypasses, you will need to redo each time u log out.
+
+killcurly:
+visit chrome://settings/signOut
+visit chrome://restart
+don't click anything, if there is pop up window, x out of it
+visit tinyurl.com/addsession
+add school/home account
+you're done!
+
+
+alternatively:
+visit chrome://extensions (after you completed steps above)
+click on an extension you want to kill, click details
+at the url bar, you should see something like "?id=something"
+copy the part right after the "?id=", type the following in:
+chrome-extension://[EXTENSION ID YOU COPIED]/manifest.json
+it should be a bunch of random JSON text. go to url bar and type "chrome://kill"
+and you're done! the extension should be killed
+
+
+bookmarklet bypass:
+basically for chrome v106+
+Requires:
+1. bookmarklets
+2. at least 1 extension installed from the chrome web store
+
+Steps:
+1. go to chrome://extensions
+2. click any extension that's installed from the webstore, not one of the enterprise installed extensions
+3. scroll down and click "Open in Chrome Web Store"
+4. spam escape before the page loads. it should be a white screen. if it loads into the chrome webstore you have to try again
+5. run this bookmarklet:
+javascript:let shim = false;var ids = prompt("extension ids (comma separated)").split(",");setInterval(()=>{ids.forEach((id)=> opener.chrome.developerPrivate.updateExtensionConfiguration({extensionId: id, fileAccess: shim}));shim = !shim;}, 250);
+7. insert extension ids. i don't feel like explaining how to get them and really you should know by now
+
+if you close the tab the extensions come back
+
+
+How to unblock get a free unblocked proxy link:
+get a github account (i wont explain how that is done)
+go to gitpod.io
+click login near top right
+click login with github
+click new workspace
+now, in the bar that pops up, paste either of two links:
+https://github.com/Edward358-AI/myohtheweb OR https://github.com/Edward358-AI/bioluminesence
+
+wait for workspace to load
+wait for everything else in the workspace to load
+make sure you see the terminal at bottom of screen, then:
+
+since the port the proxy is running at (this is configurable, in the index.mjs file) is port 3030, type "3030-" before the crazy url you have in the url bar right now, and your url should now look something like this: 
+https://3030-somefancyurl-l8bcowuh2mx.ws-us79.gitpod.io (do not actually try this)
+
+go to that link you created, and now you are done! you have a working proxy link that is specific to you! have fun surfing!
+
+note that it will not stay up forever, you probably will have to rerun it every once in a while
